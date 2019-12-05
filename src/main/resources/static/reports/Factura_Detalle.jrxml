@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura_Detalle" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2145890c-b58b-41aa-a244-dbc4c71b6b1c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DESARROLLO"/>
+	<parameter name="P_NUM_DOC" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{P_NUM_DOC}]]></defaultValueExpression>
+	</parameter>
+	<queryString language="plsql">
+		<![CDATA[SELECT CODIGO_ITEM, DESCRIPCION_ITEM, PRECIO_UNITARIO, CANTIDAD, DESCUENTO FROM ADANYC.DETALLE_DOCUMENTO WHERE NUM_DOCUMENTO = $P{P_NUM_DOC}]]>
+	</queryString>
+	<field name="CODIGO_ITEM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CODIGO_ITEM"/>
+	</field>
+	<field name="DESCRIPCION_ITEM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DESCRIPCION_ITEM"/>
+	</field>
+	<field name="PRECIO_UNITARIO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="PRECIO_UNITARIO"/>
+	</field>
+	<field name="CANTIDAD" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="CANTIDAD"/>
+	</field>
+	<field name="DESCUENTO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="DESCUENTO"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="15" uuid="3ed159e5-8351-4910-8141-65685e331858"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COD.ITEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="210" height="15" uuid="4e7b6d43-e0b8-404d-bc83-1c4f1d0a5c70"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="60" height="15" uuid="dc9f0e2f-0105-4718-815b-932306aada1a"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="60" height="15" uuid="842e2c56-5247-46cc-8ee3-bf0dc9652644"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DSCTO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="80" height="15" uuid="c7f694ef-f022-4967-8c5b-983918a94b6a"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRECIO UNIT.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="16" width="555" height="1" uuid="b52fb95a-01e6-4de5-822c-d48d7f5ae352"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="15" uuid="695e4789-3f0c-4b97-b10f-3f1622d84eaf"/>
+				<textFieldExpression><![CDATA[$F{CODIGO_ITEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="210" height="15" uuid="7c5ada0b-c877-4d5b-ab03-6a7e7d2bf920"/>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION_ITEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="80" height="15" uuid="3014affe-7a79-4887-a1df-98dcf04cea92"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{PRECIO_UNITARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="60" height="15" uuid="c45b319d-6126-44ab-8cd0-8524151d6394"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="60" height="15" uuid="822fb1e3-b05b-4ec8-aa3e-63f0ec9a8b86"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{DESCUENTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

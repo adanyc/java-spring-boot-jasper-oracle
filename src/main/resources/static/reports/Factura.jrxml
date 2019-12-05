@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="08324b60-a33e-4d17-9107-a9856e2489e6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DESARROLLO"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="P_RAZON_SOCIAL" class="java.lang.String"/>
+	<parameter name="P_NUM_DOC" class="java.lang.Integer"/>
+	<queryString language="plsql">
+		<![CDATA[SELECT 1 FROM DUAL]]>
+	</queryString>
+	<field name="1" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="1"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="121" splitType="Stretch">
+			<rectangle>
+				<reportElement x="370" y="0" width="185" height="77" backcolor="rgba(255, 255, 255, 0.0)" uuid="5a1fa953-7289-46bf-b87b-1155a5cb4b93"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="29" width="270" height="30" uuid="d0550039-1ea3-4c11-a163-aaeadae50f6e"/>
+				<textElement textAlignment="Left">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[EMPRESA S.A.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="91" width="70" height="12" uuid="43c0af07-1e8e-4600-b5a4-cb44e5f28765"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[RAZÓN SOCIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="91" width="90" height="12" uuid="dcf54571-f32a-4f3b-adb8-c97270f50a71"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CORREO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="91" width="170" height="12" uuid="0fa45fb4-4164-4331-aed6-3dda5c4db196"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[alexcabello@miempresa.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="91" width="10" height="12" uuid="7a0a2eff-1370-4c55-b439-629cfe4a1d82"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="91" width="10" height="12" uuid="810cc018-d36d-4b00-85d6-6c70ed772e7b"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="104" width="70" height="12" uuid="f8f00c30-3d4c-4852-a9e9-58efc82f24e6"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="104" width="10" height="12" uuid="154bda5a-b25d-4245-a43e-7ec4e4a6164a"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="104" width="190" height="12" uuid="f252ebd5-7356-4113-a308-009940a00c68"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CALLE DE LA IMAGINACION 123]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="104" width="90" height="12" uuid="8ac84e9d-c222-4b11-9604-a9b5a7ddd0e9"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TELEFONO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="104" width="10" height="12" uuid="dcf17462-26a3-4f67-be7c-2aa40cbe0571"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="104" width="170" height="12" uuid="e03b7277-d6b0-498f-b313-fa6f65279ae9"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[12-2345-678]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="120" width="555" height="1" uuid="b680cfb2-b9b2-4f5b-b168-a010dc342d0e"/>
+			</line>
+			<staticText>
+				<reportElement x="373" y="29" width="180" height="25" uuid="343c4dbc-7e18-47b4-a0c4-0ed4dd799c8f"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[BOLETA DE VENTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="54" width="180" height="20" uuid="052c48bb-48c7-427f-a2c9-ca43bc99c912"/>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[002-45896]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="4" width="180" height="25" uuid="c4792773-1707-4109-a3c3-6a05724d9fcd"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[R.U.C. 20100111000]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="91" width="190" height="12" uuid="90c69aaa-dac2-4ed6-bb2a-0dd3503b4ec6"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_RAZON_SOCIAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="3" width="555" height="60" uuid="370f8b65-8564-4c7b-a9b6-97510d307b9c"/>
+				<subreportParameter name="P_NUM_DOC">
+					<subreportParameterExpression><![CDATA[$P{P_NUM_DOC}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["Factura_Detalle.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>
